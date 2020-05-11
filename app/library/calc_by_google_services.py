@@ -42,7 +42,7 @@ def calc_by_latlng(p_lat, p_lon, d_lat, d_lon, taxi_type):
         "value"]
 
     duration = gmaps.distance_matrix(pickup_point, doff_point, mode="driving")["rows"][0]["elements"][0]["duration"][
-        "text"]
+        "value"]
 
     taxi_fare = get_taxi_fare(distance, taxi_type)
 
