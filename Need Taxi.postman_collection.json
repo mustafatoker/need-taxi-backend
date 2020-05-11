@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "39884965-2cc4-4af6-94a5-75677f897102",
+		"name": "Need Taxi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "predict fares",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pickup_latitude\" : 41.05,\n\t\"pickup_longitude\" : 28.98,\n\t\"drop_off_latitude\" : 41.14,\n\t\"drop_off_longitude\" : 28.46,\n\t\"taxi_type\" : 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/predict-fares",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"predict-fares"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate distances",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pickup_latitude\" : 41.05,\n\t\"pickup_longitude\" : 28.98,\n\t\"drop_off_latitude\" : 41.14,\n\t\"drop_off_longitude\" : 28.46,\n\t\"taxi_type\" : 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/calculation-duration-distances",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"calculation-duration-distances"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

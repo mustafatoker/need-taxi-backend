@@ -1,5 +1,6 @@
 *.py[co]
 *.DS_*
+.env
 # Packages
 *.egg
 *.egg-info
