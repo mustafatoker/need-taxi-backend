@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, request
 from kanpai import Kanpai
-from mlearn.prediction_by_machine_learning import *
+
 from mlearn.calc_by_google_services import calc_by_latlng
+from mlearn.prediction_by_machine_learning import *
 
 app = Flask(__name__)
 
@@ -85,3 +86,7 @@ def calculateDurationDistance():
         duration=duration,
         totalFee=total_fee,
     )
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True, port=5000)
