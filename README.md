@@ -1,7 +1,7 @@
 # The Need Taxi Backend API
 Predict taxi fares through machine learning using random forest and linear_regression.
 
-#### Installation On Windows
+#### Installation On OSX
 ```
 - pip install virtualenv
 - virtualenv venv 
@@ -11,10 +11,10 @@ Predict taxi fares through machine learning using random forest and linear_regre
 - flask run
 ```
 
-#### Installation On OSX
+#### Installation On Windows
 ```
 - pip install virtualenv
-- virtualenv env
+- virtualenv venv
 - venv\Scripts\activate.bat - Windows
 - pip install -r requirements.txt
 - set FLASK_APP=app\app.py - Windows
@@ -23,6 +23,12 @@ Predict taxi fares through machine learning using random forest and linear_regre
 
 Running on http://127.0.0.1:5000/
 
+### Docker
+```
+docker build -t need-taxi-backend .
+docker-compose up -d
+docker build -t  need-taxi-backend_app . && docker run -it  need-taxi-backend_app
+```
 
 #### Endpoints
 ```
