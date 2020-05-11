@@ -1,11 +1,23 @@
 # The Need Taxi Backend API
 Predict taxi fares through machine learning using random forest and linear_regression.
 
-####Installation
+####Installation On Windows
 ```
+- pip install virtualenv
+- virtualenv venv 
+- source <desired-path>/bin/activate - OSX
 - pip install -r requirements.txt
-- set FLASK_APP=app.py - Windows
-- export FLASK_APP=hello.py - Unix
+- export FLASK_APP=app/hello.py - OSX
+- flask run
+```
+
+####Installation On OSX
+```
+- pip install virtualenv
+- virtualenv env
+- venv\Scripts\activate.bat - Windows
+- pip install -r requirements.txt
+- set FLASK_APP=app\app.py - Windows
 - flask run
 ```
 

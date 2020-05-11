@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 # Set random seed 
 RSEED = 100
 # Read the data
-data = pd.read_csv(os.path.join(os.path.dirname(__file__), "../mlearn/needtaxi_logs.csv"))
+data = pd.read_csv(os.path.join(os.path.dirname(__file__), "../library/needtaxi_logs.csv"))
 
 # Remove latitude and longtiude outliers
 data = data.loc[data['pickup_latitude'].between(40, 42)]
@@ -45,7 +45,6 @@ def get_linear_regression_prediction(p_lat, p_lon, d_lat, d_lon, taxi_type):
     pred = linear_regression.predict(X_new)
 
     return round(pred[0], 2)
-
 
 # training and predictiong by random forest
 def get_random_forest_prediction(p_lat, p_lon, d_lat, d_lon, taxi_type):

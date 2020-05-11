@@ -1,10 +1,15 @@
 from flask import Flask, jsonify, request
 from kanpai import Kanpai
-
-from mlearn.calc_by_google_services import calc_by_latlng
-from mlearn.prediction_by_machine_learning import *
+from app.config.settings import *
+from app.library.calc_by_google_services import calc_by_latlng
+from app.library.prediction_by_machine_learning import get_linear_regression_prediction, get_random_forest_prediction
 
 app = Flask(__name__)
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Need Taxi</h1>'''
 
 
 @app.route('/api/v1/predict-fares', methods=['POST'])
