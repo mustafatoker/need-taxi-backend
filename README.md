@@ -1,7 +1,7 @@
 # The Need Taxi Backend API
 Predict taxi fares through machine learning using random forest and linear_regression.
 
-####Installation
+#### Installation
 ```
 - pip install -r requirements.txt
 - set FLASK_APP=app.py - Windows
@@ -12,7 +12,7 @@ Predict taxi fares through machine learning using random forest and linear_regre
 Running on http://127.0.0.1:5000/
 
 
-####Endpoints
+#### Endpoints
 ```
 HEAD | POST predict-fares
 HEAD | POST calculation-duration-distances
@@ -21,7 +21,7 @@ HEAD | POST calculation-duration-distances
 You can see endpoint details in the postman collection.
 
 
-Sample Request:
+#### Sample Request:
 
 ```
 HEAD | POST http://127.0.0.1:5000/api/v1/predict-fares
