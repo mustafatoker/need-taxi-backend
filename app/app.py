@@ -4,15 +4,15 @@ from app.config.settings import *
 from app.library.calc_by_google_services import calc_by_latlng
 from app.library.prediction_by_machine_learning import get_linear_regression_prediction, get_random_forest_prediction
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def home():
     return '''<h1>Need Taxi</h1>'''
 
 
-@app.route('/api/v1/predict-fares', methods=['POST'])
+@application.route('/api/v1/predict-fares', methods=['POST'])
 def predictFares():
     schema = Kanpai.Object({
         "pickup_latitude": Kanpai.Number().required(),
@@ -52,7 +52,7 @@ def predictFares():
     )
 
 
-@app.route('/api/v1/calculation-duration-distances', methods=['POST'])
+@application.route('/api/v1/calculation-duration-distances', methods=['POST'])
 def calculateDurationDistance():
     schema = Kanpai.Object({
         "pickup_latitude": Kanpai.Number().required(),
@@ -94,4 +94,4 @@ def calculateDurationDistance():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=5000)
+    application.run(host='0.0.0.0', debug=True)
